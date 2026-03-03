@@ -1,0 +1,430 @@
+```html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bond Coffee Co. Ortaköy | Huzurun ve Kahvenin Buluşma Noktası</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#DB2777',
+                        secondary: '#F472B6',
+                        cta: '#CA8A04',
+                        background: '#FDF2F8',
+                        content: '#831843',
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .glass-dark {
+            background: rgba(131, 24, 67, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(219, 39, 119, 0.1);
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #DB2777 !important;
+        }
+        section { padding: 80px 0; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+        }
+    </style>
+</head>
+<body class="bg-background text-content font-sans overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center shadow-lg">
+            <div class="flex items-center gap-2">
+                <span class="font-display font-bold text-xl tracking-tight text-primary">BOND COFFEE CO.</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="#about" class="hover:text-primary transition-colors cursor-pointer">Hakkımızda</a>
+                <a href="#products" class="hover:text-primary transition-colors cursor-pointer">Ürünler</a>
+                <a href="#gallery" class="hover:text-primary transition-colors cursor-pointer">Galeri</a>
+                <a href="#contact" class="hover:text-primary transition-colors cursor-pointer">İletişim</a>
+            </div>
+            <a href="https://wa.me/905379402069" class="bg-cta text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition-all shadow-md cursor-pointer flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.888 11.888-11.888 3.176 0 6.161 1.237 8.404 3.48s3.481 5.229 3.481 8.408c0 6.556-5.332 11.888-11.888 11.888-2.003 0-3.976-.505-5.723-1.465l-6.261 1.687zm6.638-4.147c1.516.903 3.19 1.384 4.912 1.384 5.398 0 9.791-4.393 9.791-9.791 0-2.615-1.02-5.074-2.871-6.925s-4.31-2.871-6.92-2.871c-5.398 0-9.791 4.393-9.791 9.791 0 1.83.513 3.615 1.482 5.176l-.988 3.606 3.697-.97zm9.954-6.864c-.28-.14-1.654-.817-1.91-.909-.256-.094-.442-.14-.628.14-.186.28-.721.909-.884 1.095-.163.186-.326.21-.605.07-.279-.14-1.181-.435-2.251-1.39-.831-.741-1.392-1.656-1.555-1.936-.163-.28-.018-.431.122-.571.125-.126.28-.326.419-.489.14-.163.186-.28.28-.466.094-.186.047-.35-.024-.49-.07-.14-.628-1.514-.861-2.072-.226-.541-.453-.467-.628-.476-.163-.008-.349-.01-.535-.01-.186 0-.489.07-.744.35-.256.28-.977.955-.977 2.33 0 1.375 1.001 2.702 1.14 2.888.14.186 1.968 3.006 4.767 4.213.665.287 1.185.459 1.589.587.67.213 1.279.183 1.761.111.537-.08 1.654-.676 1.887-1.33.232-.653.232-1.213.163-1.33-.07-.116-.256-.186-.535-.326z"/></svg>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen relative flex items-center justify-center overflow-hidden pt-0">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1920" alt="Bond Coffee Garden" class="w-full h-full object-cover scale-105 transition-transform duration-1000">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl" data-aos="fade-up">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30 mb-6">
+                <span class="text-yellow-400">★</span>
+                <span class="text-white font-semibold">4.4 / 5 Rating</span>
+                <span class="text-white/80 text-sm ml-2">1168+ Yorum</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
+                Ortaköy'ün <br><span class="text-secondary">Gizli Bahçesi</span>
+            </h1>
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Beşiktaş'ın kalbinde, ağaçlar altında ferah bir mola. Kendi üretimimiz taze tatlılar ve nitelikli kahve deneyimi.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://maps.google.com/?cid=7410280367357176639" class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:-translate-y-1 transition-all cursor-pointer">
+                    Yol Tarifi Al
+                </a>
+                <a href="tel:+905379402069" class="glass text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:-translate-y-1 transition-all cursor-pointer">
+                    Hemen Ara
+                </a>
+            </div>
+        </div>
+        
+        <a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7" /></svg>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2 relative" data-aos="fade-right">
+                <div class="absolute -top-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=800" alt="Garden Area" class="rounded-3xl shadow-2xl relative z-10 w-full object-cover h-[500px]">
+                <div class="absolute -bottom-6 -right-6 glass-dark p-6 rounded-2xl z-20 shadow-xl max-w-[200px]">
+                    <p class="text-primary font-bold text-lg">Huzurlu Atmosfer</p>
+                    <p class="text-sm opacity-80">Doğa ile iç içe geniş bahçe alanı.</p>
+                </div>
+            </div>
+            <div class="lg:w-1/2" data-aos="fade-left">
+                <h2 class="text-primary font-display font-bold text-lg uppercase tracking-widest mb-4">Hakkımızda</h2>
+                <h3 class="text-4xl font-display font-bold mb-6 leading-tight">Dereboyu Caddesi'nin En Ferah Köşesi</h3>
+                <p class="text-lg text-content/80 mb-6 leading-relaxed">
+                    Bond Coffee Co. Ortaköy, cadde üzerindeki mütevazı girişinin ardında devasa bir bahçe saklıyor. Şehrin gürültüsünden uzak, ağaçların gölgesinde hem açık hem kapalı alan seçenekleriyle misafirlerimize konforlu bir ortam sunuyoruz.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+                        </div>
+                        <h4 class="font-bold">El Yapımı</h4>
+                        <p class="text-sm opacity-70">Tüm tatlılar ve kahvaltılıklar mutfağımızdan.</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="w-12 h-12 bg-cta/10 rounded-xl flex items-center justify-center text-cta">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                        </div>
+                        <h4 class="font-bold">Geniş Bahçe</h4>
+                        <p class="text-sm opacity-70">Açık havada, ferah ve sakin oturma alanı.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="bg-white/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-primary font-display font-bold text-lg uppercase tracking-widest mb-4">Lezzetlerimiz</h2>
+                <h3 class="text-4xl font-display font-bold">Tazelik ve Kalite Bir Arada</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="glass-dark rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600" alt="Kahve" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3">Nitelikli Kahveler</h4>
+                        <p class="opacity-70 mb-4">Dünyanın dört bir yanından özenle seçilmiş çekirdeklerle hazırlanan taze kahve çeşitleri.</p>
+                        <span class="text-primary font-bold">Latte • Flat White • V60</span>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="glass-dark rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=600" alt="Tatlı" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3">Günlük Tatlılar</h4>
+                        <p class="opacity-70 mb-4">Mutfak ekibimiz tarafından her sabah taze olarak hazırlanan, el yapımı eşsiz lezzetler.</p>
+                        <span class="text-primary font-bold">Cheesecake • Magnolia • Brownie</span>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="glass-dark rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&q=80&w=600" alt="Kahvaltı" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3">Zengin Kahvaltı</h4>
+                        <p class="opacity-70 mb-4">Güne başlamanın en keyifli yolu. Taze malzemelerle hazırlanan doyurucu tabaklar.</p>
+                        <span class="text-primary font-bold">Bowls • Sandwiches • Eggs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-display font-bold text-lg uppercase tracking-widest mb-4">Misafirlerimiz</h2>
+                <h3 class="text-4xl font-display font-bold">Sizden Gelenler</h3>
+            </div>
+            
+            <div class="swiper reviewSwiper pb-12">
+                <div class="swiper-wrapper">
+                    <!-- Review 1 -->
+                    <div class="swiper-slide px-4">
+                        <div class="glass p-8 rounded-3xl border border-white h-full shadow-sm">
+                            <div class="flex items-center gap-4 mb-6">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjVSk1BIHjWY9FlKa94rdOj7Yyz1XbcBjVGBHFT7bl_b-PsihJjh=s128-c0x00000000-cc-rp-mo-ba7" class="w-16 h-16 rounded-full border-2 border-primary" alt="Gurme Rehber">
+                                <div>
+                                    <p class="font-bold text-lg">Gurme Rehber</p>
+                                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-content/80 leading-relaxed italic">"Bond Coffee Ortaköy'de içeride kocaman bir bahçesi bulunuyor. Ağaçlar altında hem açık havada hem de kapalı alanda oturabileceğiniz bir çok alan mevcut. Tüm ürünler çok taze ve lezzetliydi."</p>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="swiper-slide px-4">
+                        <div class="glass p-8 rounded-3xl border border-white h-full shadow-sm">
+                            <div class="flex items-center gap-4 mb-6">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjUK1mgDOLvhDnWPMjPM_JQplHSLTaKnNgGdRIKc1EAAWa2e3RzV=s128-c0x00000000-cc-rp-mo-ba4" class="w-16 h-16 rounded-full border-2 border-primary" alt="Sercan Haliloglu">
+                                <div>
+                                    <p class="font-bold text-lg">Sercan Haliloglu</p>
+                                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="text-content/80 leading-relaxed italic">"Özellikle güzel havalarda bahçede oturmak gerçekten rahat ve ferah bir ortam sunuyor. Menülerinin büyük kısmı kendi imalatları, bu da ürünlere ayrı bir tazelik katıyor. Uzun süre vakit geçirmek için uygun."</p>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="swiper-slide px-4">
+                        <div class="glass p-8 rounded-3xl border border-white h-full shadow-sm">
+                            <div class="flex items-center gap-4 mb-6">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocIdMXp0MwTl3XBJQQ-uSQx9WQwPRfT97zaBCZAiygWG9l1eOQ=s128-c0x00000000-cc-rp-mo" class="w-16 h-16 rounded-full border-2 border-primary" alt="Arda Uyan">
+                                <div>
+                                    <p class="font-bold text-lg">Arda Uyan</p>
+                                    <div class="flex text-yellow-400 text-sm">★★★★☆</div>
+                                </div>
+                            </div>
+                            <p class="text-content/80 leading-relaxed italic">"Ortam ve mekan olarak harika, arkadaşlarınızla rahatça oturup keyifle vakit geçirebileceğiniz bir yer. Çalışanları da bir o kadar nazik ve kibar ayrıca oldukça ilgililer."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="bg-primary/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-display font-bold text-lg uppercase tracking-widest mb-4">Galeri</h2>
+                <h3 class="text-4xl font-display font-bold">Bond Atmosferi</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="https://source.unsplash.com/1200x800/?coffee,cafe,1" class="glightbox h-64 rounded-2xl overflow-hidden shadow-lg hover:opacity-90 transition-opacity">
+                    <img src="https://source.unsplash.com/800x600/?coffee,cafe,1" class="w-full h-full object-cover" alt="Bond Coffee 1">
+                </a>
+                <a href="https://source.unsplash.com/1200x800/?garden,cafe,2" class="glightbox h-64 rounded-2xl overflow-hidden shadow-lg hover:opacity-90 transition-opacity">
+                    <img src="https://source.unsplash.com/800x600/?garden,cafe,2" class="w-full h-full object-cover" alt="Bond Coffee 2">
+                </a>
+                <a href="https://source.unsplash.com/1200x800/?pastry,cake,3" class="glightbox h-64 rounded-2xl overflow-hidden shadow-lg hover:opacity-90 transition-opacity">
+                    <img src="https://source.unsplash.com/800x600/?pastry,cake,3" class="w-full h-full object-cover" alt="Bond Coffee 3">
+                </a>
+                <a href="https://source.unsplash.com/1200x800/?interior,modern,4" class="glightbox h-64 rounded-2xl overflow-hidden shadow-lg hover:opacity-90 transition-opacity">
+                    <img src="https://source.unsplash.com/800x600/?interior,modern,4" class="w-full h-full object-cover" alt="Bond Coffee 4">
+                </a>
+                <a href="https://source.unsplash.com/1200x800/?breakfast,food,5" class="glightbox h-64 rounded-2xl overflow-hidden shadow-lg hover:opacity-90 transition-opacity">
+                    <img src="https://source.unsplash.com/800x600/?breakfast,food,5" class="w-full h-full object-cover" alt="Bond Coffee 5">
+                </a>
+                <a href="https://source.unsplash.com/1200x800/?barista,coffee,6" class="glightbox h-64 rounded-2xl overflow-hidden shadow-lg hover:opacity-90 transition-opacity">
+                    <img src="https://source.unsplash.com/800x600/?barista,coffee,6" class="w-full h-full object-cover" alt="Bond Coffee 6">
+                </a>
+                <a href="https://source.unsplash.com/1200x800/?outdoor,patio,7" class="glightbox h-64 rounded-2xl overflow-hidden shadow-lg hover:opacity-90 transition-opacity">
+                    <img src="https://source.unsplash.com/800x600/?outdoor,patio,7" class="w-full h-full object-cover" alt="Bond Coffee 7">
+                </a>
+                <a href="https://source.unsplash.com/1200x800/?dessert,sweets,8" class="glightbox h-64 rounded-2xl overflow-hidden shadow-lg hover:opacity-90 transition-opacity">
+                    <img src="https://source.unsplash.com/800x600/?dessert,sweets,8" class="w-full h-full object-cover" alt="Bond Coffee 8">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Map Section -->
+    <section id="hours" class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="glass-dark p-10 rounded-3xl" data-aos="fade-right">
+                <h3 class="text-3xl font-display font-bold mb-8">Çalışma Saatleri</h3>
+                <ul class="space-y-4">
+                    <li class="flex justify-between border-b border-primary/10 pb-2"><span>Pazartesi</span> <span class="font-bold">08:00 – 00:00</span></li>
+                    <li class="flex justify-between border-b border-primary/10 pb-2"><span>Salı</span> <span class="font-bold">08:00 – 00:00</span></li>
+                    <li class="flex justify-between border-b border-primary/10 pb-2"><span>Çarşamba</span> <span class="font-bold">08:00 – 00:00</span></li>
+                    <li class="flex justify-between border-b border-primary/10 pb-2"><span>Perşembe</span> <span class="font-bold">08:00 – 00:00</span></li>
+                    <li class="flex justify-between border-b border-primary/10 pb-2"><span>Cuma</span> <span class="font-bold">08:00 – 00:00</span></li>
+                    <li class="flex justify-between border-b border-primary/10 pb-2"><span>Cumartesi</span> <span class="font-bold">08:00 – 00:00</span></li>
+                    <li class="flex justify-between border-b border-primary/10 pb-2 text-primary font-bold"><span>Pazar</span> <span>08:00 – 00:00</span></li>
+                </ul>
+                <div class="mt-10 p-4 bg-cta/10 rounded-2xl text-center">
+                    <p class="text-cta font-bold">Her gün 16 saat boyunca açığız!</p>
+                </div>
+            </div>
+            
+            <div class="rounded-3xl overflow-hidden h-[500px] shadow-2xl relative" data-aos="fade-left">
+                <!-- Map Placeholder Image (Using static style for cleaner look) -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.117170133614!2d29.021839976587655!3d41.05201867134444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7ca17bb130b%3A0x66d69abb96602b3f!2sBond%20Coffee%20Co.!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-primary text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-display font-bold mb-8">Bize Ulaşın</h2>
+            <p class="text-white/80 text-xl mb-12 max-w-2xl mx-auto">Sorularınız veya rezervasyon talepleriniz için bir telefon uzağınızdayız.</p>
+            
+            <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
+                <a href="tel:+905379402069" class="glass w-full md:w-80 p-8 rounded-3xl hover:bg-white/30 transition-all cursor-pointer">
+                    <div class="bg-white text-primary w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    </div>
+                    <p class="font-bold text-xl mb-2">Telefon</p>
+                    <p class="text-white/90 font-medium">+90 537 940 20 69</p>
+                </a>
+                
+                <a href="https://wa.me/905379402069" class="glass w-full md:w-80 p-8 rounded-3xl hover:bg-white/30 transition-all cursor-pointer">
+                    <div class="bg-white text-primary w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-1.403-.481-2.407-1.338-.764-.652-1.269-1.463-1.43-1.737-.163-.272-.012-.418.124-.556.122-.123.272-.318.41-.477.136-.158.182-.266.272-.445.091-.178.045-.336-.022-.472-.067-.136-.594-1.442-.816-1.97-.216-.513-.434-.442-.594-.45-.154-.008-.331-.01-.508-.01-.176 0-.462.067-.702.327-.241.259-.92.898-.92 2.19 0 1.293.941 2.54 1.072 2.712.131.174 1.85 2.822 4.483 3.958.625.27 1.112.43 1.493.551.628.2 1.2.172 1.652.104.505-.075 1.554-.634 1.772-1.25.218-.616.218-1.143.153-1.251-.064-.108-.236-.172-.511-.309z"/></svg>
+                    </div>
+                    <p class="font-bold text-xl mb-2">WhatsApp</p>
+                    <p class="text-white/90 font-medium">Hızlı Destek Hattı</p>
+                </a>
+
+                <div class="glass w-full md:w-80 p-8 rounded-3xl">
+                    <div class="bg-white text-primary w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    </div>
+                    <p class="font-bold text-xl mb-2">Adres</p>
+                    <p class="text-white/90 font-medium text-sm">Mecidiye, Dereboyu Cd. No: 121-123/B, Beşiktaş</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background py-10 border-t border-primary/10">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-primary font-display font-bold text-xl">
+                BOND COFFEE CO.
+            </div>
+            <div class="text-content/60 text-sm">
+                &copy; 2024 Bond Coffee Co. Ortaköy. Tüm Hakları Saklıdır.
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out'
+        });
+
+        // Initialize GLightbox
+        const lightbox = GLightbox({
+            selector: '.glightbox'
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper('.reviewSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+            autoplay: {
+                delay: 5000,
+            },
+        });
+
+        // Sticky Nav Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav div');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/80', 'shadow-xl');
+            } else {
+                nav.classList.remove('bg-white/80', 'shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>
